@@ -1,0 +1,217 @@
+--- wireless/mac80211_hwsim.c	2021-06-13 10:36:25.347922117 -0700
++++ wireless-new/mac80211_hwsim.c	2021-06-13 10:45:55.931749128 -0700
+@@ -61,6 +61,11 @@ static bool support_p2p_device = true;
+ module_param(support_p2p_device, bool, 0444);
+ MODULE_PARM_DESC(support_p2p_device, "Support P2P-Device interface type");
+ 
++/* MODIFIED: parameter to set unique MAC address */
++static int starting_mac_addr = 0;
++module_param(starting_mac_addr, int, 0444);
++MODULE_PARM_DESC(starting_mac_addr, "Starting MAC address");
++
+ /**
+  * enum hwsim_regtest - the type of regulatory tests we offer
+  *
+@@ -788,10 +793,164 @@ DEFINE_SIMPLE_ATTRIBUTE(hwsim_fops_group
+ 			hwsim_fops_group_read, hwsim_fops_group_write,
+ 			"%llx\n");
+ 
++static inline u64 mac80211_hwsim_get_tsf_raw(void);
++static bool mac80211_hwsim_addr_match(struct mac80211_hwsim_data *data, const u8 *addr);
++static void mac80211_hwsim_monitor_ack(struct ieee80211_channel *chan, const u8 *addr);
++static void mac80211_hwsim_add_vendor_rtap(struct sk_buff *skb);
++
++/*MODIFIED: add helper function to get channel data from radiotap header; used to set rx_status */
++static void channel_from_rthdr(struct ieee80211_radiotap_header *hdr, struct ieee80211_channel *chan) {
++	unsigned int channel_location;
++	u32 it_present;
++	u16 flags;
++	unsigned char * buff = (unsigned char *) hdr;;
++	if (!hdr) {
++		chan->band = NL80211_BAND_2GHZ;
++		chan->center_freq = 2437;
++	}
++	else {
++		it_present= le32_to_cpu(hdr->it_present);
++		channel_location = 8;
++		if (it_present & (1 << IEEE80211_RADIOTAP_TSFT))  channel_location += 8;
++		if (it_present & (1 << IEEE80211_RADIOTAP_FLAGS)) channel_location += 1;
++		if (it_present & (1 << IEEE80211_RADIOTAP_RATE)) channel_location += 1;
++		if (channel_location %2) channel_location++;  /* channel must start on 16 bit boundary */
++		if (it_present & (1 << IEEE80211_RADIOTAP_CHANNEL)) {
++			chan->center_freq = le16_to_cpu(*((u16 *) (buff+channel_location)));
++			flags = le16_to_cpu(*((u16 *) (buff+channel_location+2)));
++			if (flags & IEEE80211_CHAN_2GHZ) {
++				chan->band = NL80211_BAND_2GHZ;
++			}
++			else chan->band = NL80211_BAND_5GHZ;
++		}
++		else {
++			chan->band = NL80211_BAND_2GHZ;
++			chan->center_freq = 2437;
++		}
++	}
++}
++
+ static netdev_tx_t hwsim_mon_xmit(struct sk_buff *skb,
+ 					struct net_device *dev)
+ {
+-	/* TODO: allow packet injection */
++	/* MODIFIED: allow packet injection */
++
++	struct mac80211_hwsim_data *data;
++	struct ieee80211_hdr *hdr;
++	struct ieee80211_tx_info *info;
++	struct ieee80211_rx_status rx_status;
++    struct ieee80211_radiotap_header *rt_header;	
++	struct ieee80211_channel chan;
++	
++	bool ack_sent;
++	
++	u64 now;
++
++	data = netdev_priv(dev);
++	
++	/*********************************************
++	 * consume the radio tap header 
++	 *********************************************/
++	rt_header = (struct ieee80211_radiotap_header *) skb->data;
++	if (rt_header->it_len < skb->len) skb_pull(skb, rt_header->it_len);
++	else rt_header = NULL;
++    channel_from_rthdr(rt_header, &chan);
++	
++	hdr = (struct ieee80211_hdr *) skb->data;
++	info = IEEE80211_SKB_CB(skb);
++
++	memset(&rx_status, 0, sizeof(rx_status));
++	rx_status.flag |= RX_FLAG_MACTIME_START;
++	rx_status.freq = chan.center_freq;
++	rx_status.band = chan.band;
++	if (info->control.rates[0].flags & IEEE80211_TX_RC_VHT_MCS) {
++		rx_status.rate_idx =
++			ieee80211_rate_get_vht_mcs(&info->control.rates[0]);
++		rx_status.nss =
++			ieee80211_rate_get_vht_nss(&info->control.rates[0]);
++		rx_status.encoding = RX_ENC_VHT;
++	} else {
++		rx_status.rate_idx = info->control.rates[0].idx;
++		if (info->control.rates[0].flags & IEEE80211_TX_RC_MCS)
++			rx_status.encoding = RX_ENC_HT;
++	}
++	if (info->control.rates[0].flags & IEEE80211_TX_RC_40_MHZ_WIDTH)
++		rx_status.bw = RATE_INFO_BW_40;
++	else if (info->control.rates[0].flags & IEEE80211_TX_RC_80_MHZ_WIDTH)
++		rx_status.bw = RATE_INFO_BW_80;
++	else if (info->control.rates[0].flags & IEEE80211_TX_RC_160_MHZ_WIDTH)
++		rx_status.bw = RATE_INFO_BW_160;
++	else
++		rx_status.bw = RATE_INFO_BW_20;
++	if (info->control.rates[0].flags & IEEE80211_TX_RC_SHORT_GI)
++		rx_status.enc_flags |= RX_ENC_FLAG_SHORT_GI;
++	/* TODO: simulate real signal strength (and optional packet loss) */
++	rx_status.signal = -50;
++	if (info->control.vif)
++		rx_status.signal += info->control.vif->bss_conf.txpower;
++
++	/* release the skb's source info */
++	skb_orphan(skb);
++	skb_dst_drop(skb);
++	skb->mark = 0;
++	secpath_reset(skb);
++	nf_reset(skb);
++
++	/*
++	 * Get absolute mactime here so all HWs RX at the "same time", and
++	 * absolute TX time for beacon mactime so the timestamp matches.
++	 * Giving beacons a different mactime than non-beacons looks messy, but
++	 * it helps the Toffset be exact and a ~10us mactime discrepancy
++	 * probably doesn't really matter.
++	 */
++	if (ieee80211_is_beacon(hdr->frame_control) ||
++	    ieee80211_is_probe_resp(hdr->frame_control))
++		now = data->abs_bcn_ts;
++	else
++		now = mac80211_hwsim_get_tsf_raw();
++
++	ack_sent = false;
++	spin_lock(&hwsim_radio_lock);
++	list_for_each_entry(data, &hwsim_radios, list) {
++		struct sk_buff *nskb;
++		/*
++		 * reserve some space for our vendor and the normal
++		 * radiotap header, since we're copying anyway
++		 */
++		if (skb->len < PAGE_SIZE && paged_rx) {
++			struct page *page = alloc_page(GFP_ATOMIC);
++			if (!page)
++				continue;
++			nskb = dev_alloc_skb(128);
++			if (!nskb) {
++				__free_page(page);
++				continue;
++			}
++			memcpy(page_address(page), skb->data, skb->len);
++			skb_add_rx_frag(nskb, 0, page, 0, skb->len, skb->len);
++		} else {
++			nskb = skb_copy(skb, GFP_ATOMIC);
++			if (!nskb)
++				continue;
++		}
++		
++		/* generate an acknowledgement if this was unicast to this radio (but not for each radio) */
++		hdr = (struct ieee80211_hdr *) nskb->data;
++		if (skb->len >= 16 && mac80211_hwsim_addr_match(data, hdr->addr1) && !ieee80211_is_ack(hdr->frame_control)) {
++			if (!ack_sent) {
++				mac80211_hwsim_monitor_ack(&chan, hdr->addr2);			
++                ack_sent = true;
++			}
++		}
++		
++		rx_status.mactime = now + data->tsf_offset;
++		memcpy(IEEE80211_SKB_RXCB(nskb), &rx_status, sizeof(rx_status));
++		mac80211_hwsim_add_vendor_rtap(nskb);
++		data->rx_pkts++;
++		data->rx_bytes += nskb->len;
++		ieee80211_rx_irqsafe(data->hw, nskb);
++	}
++	spin_unlock(&hwsim_radio_lock);
+ 	dev_kfree_skb(skb);
+ 	return NETDEV_TX_OK;
+ }
+@@ -1217,6 +1376,7 @@ static bool mac80211_hwsim_tx_frame_no_n
+ 		rx_status.enc_flags |= RX_ENC_FLAG_SHORT_GI;
+ 	/* TODO: simulate real signal strength (and optional packet loss) */
+ 	rx_status.signal = -50;
++
+ 	if (info->control.vif)
+ 		rx_status.signal += info->control.vif->bss_conf.txpower;
+ 
+@@ -1387,14 +1547,16 @@ static void mac80211_hwsim_tx(struct iee
+ 	/* wmediumd mode check */
+ 	_portid = ACCESS_ONCE(data->wmediumd);
+ 
++	//todo: add selection of tx or cap
+ 	if (_portid)
+ 		return mac80211_hwsim_tx_frame_nl(hw, skb, _portid);
+-
++	
+ 	/* NO wmediumd detected, perfect medium simulation */
+ 	data->tx_pkts++;
+ 	data->tx_bytes += skb->len;
+ 	ack = mac80211_hwsim_tx_frame_no_nl(hw, skb, channel);
+-
++	ack = true;
++	
+ 	if (ack && skb->len >= 16)
+ 		mac80211_hwsim_monitor_ack(channel, hdr->addr2);
+ 
+@@ -2523,7 +2685,8 @@ static int mac80211_hwsim_new_radio(stru
+ 	eth_zero_addr(addr);
+ 	addr[0] = 0x02;
+ 	addr[3] = idx >> 8;
+-	addr[4] = idx;
++    /* MODIFIED: use starting_mac_addr parameter */
++	addr[4] = idx+starting_mac_addr;
+ 	memcpy(data->addresses[0].addr, addr, ETH_ALEN);
+ 	memcpy(data->addresses[1].addr, addr, ETH_ALEN);
+ 	data->addresses[1].addr[0] |= 0x40;

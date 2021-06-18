@@ -1,0 +1,3 @@
+#!/bin/sh
+telnetd -p 22 -b 10.0.2.11 &
+echo "telnetd started; access using telnet localhost 666<machine-number>"

@@ -1,0 +1,6 @@
+# Begin /etc/hosts (network card version)
+
+127.0.0.1 localhost
+192.168.222.1 clfs1
+
+# End /etc/hosts (network card version)

@@ -1,0 +1,4 @@
+clean,regular
+download,regular
+install_targetfs, minimal
+other_actions, minimal

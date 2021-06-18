@@ -1,0 +1,5 @@
+download, clfs_system, project_folders
+install_targetfs, clfs_system, project_folders
+install_targetfs, busybox, download
+install_targetfs, gcc, build_final
+install_targetfs, glibc, install_targetfs

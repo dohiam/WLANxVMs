@@ -1,0 +1,10 @@
+#!/bin/sh
+#insmod mac80211_hwsim.ko radios=2
+insmod /lib/modules/4.14.180/kernel/drivers/net/wireless/mac80211_hwsim.ko radios=2 
+hostapd /etc/hostapd/hostapd.conf &
+iwconfig wlan1 essid testap channel 6
+ifconfig hwsim0 up
+ifconfig wlan0 172.16.16.1
+ifconfig wlan1 172.16.16.2
+ifconfig wlan0 up
+ifconfig wlan1 up

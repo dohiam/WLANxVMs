@@ -1,0 +1,8 @@
+--- ../build/linux/scripts/gen_initramfs_list.sh	2017-04-12 03:41:42.000000000 -0700
++++ gen_initramfs_list.sh	2020-05-05 17:28:56.612127816 -0700
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/bin/bash
+ # Copyright (C) Martin Schlemmer <azarah@nosferatu.za.org>
+ # Copyright (C) 2006 Sam Ravnborg <sam@ravnborg.org>
+ #

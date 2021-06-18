@@ -1,0 +1,11 @@
+#!/bin/bash
+## @file clear_status.sh
+## @brief clears the error file for the indicaed package and step 
+#
+#fine-print: Copyright (c) 2020-2021, David Hamilton <david@davidohamilton.com>. This software may be freely copied and used under GPLv2 (see LICENSE.txt in root directory).
+
+. ${CLFS}/scripts/common
+if [ $# -ne 2 ]; then
+  echo "Usage: $0 <package> <step> to it's status"
+fi
+clear_status $1 $2

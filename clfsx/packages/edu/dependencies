@@ -1,0 +1,4 @@
+download, clfs_system, project_folders
+install_targetfs, edu, download
+install_targetfs, linux, install_targetfs
+install_targetfs, targetfs, make_rootfs_directories

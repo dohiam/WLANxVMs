@@ -1,0 +1,401 @@
+
+custom_packages/cross_injector/bin/Debug/cross_injector:     file format elf64-x86-64
+
+SYMBOL TABLE:
+00000000004002a8 l    d  .interp	0000000000000000              .interp
+00000000004002c4 l    d  .note.ABI-tag	0000000000000000              .note.ABI-tag
+00000000004002e8 l    d  .hash	0000000000000000              .hash
+0000000000400530 l    d  .gnu.hash	0000000000000000              .gnu.hash
+0000000000400550 l    d  .dynsym	0000000000000000              .dynsym
+0000000000400c70 l    d  .dynstr	0000000000000000              .dynstr
+0000000000400fe6 l    d  .gnu.version	0000000000000000              .gnu.version
+0000000000401080 l    d  .gnu.version_r	0000000000000000              .gnu.version_r
+0000000000401110 l    d  .rela.dyn	0000000000000000              .rela.dyn
+0000000000401140 l    d  .rela.plt	0000000000000000              .rela.plt
+0000000000402000 l    d  .init	0000000000000000              .init
+0000000000402030 l    d  .plt	0000000000000000              .plt
+00000000004024d0 l    d  .text	0000000000000000              .text
+000000000040b0f4 l    d  .fini	0000000000000000              .fini
+000000000040c000 l    d  .rodata	0000000000000000              .rodata
+000000000040dea8 l    d  .eh_frame_hdr	0000000000000000              .eh_frame_hdr
+000000000040e3c8 l    d  .eh_frame	0000000000000000              .eh_frame
+0000000000410df0 l    d  .ctors	0000000000000000              .ctors
+0000000000410e00 l    d  .dtors	0000000000000000              .dtors
+0000000000410e10 l    d  .dynamic	0000000000000000              .dynamic
+0000000000410ff0 l    d  .got	0000000000000000              .got
+0000000000411000 l    d  .got.plt	0000000000000000              .got.plt
+0000000000411260 l    d  .data	0000000000000000              .data
+0000000000411660 l    d  .bss	0000000000000000              .bss
+0000000000000000 l    d  .comment	0000000000000000              .comment
+0000000000000000 l    d  .debug_aranges	0000000000000000              .debug_aranges
+0000000000000000 l    d  .debug_info	0000000000000000              .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000              .debug_abbrev
+0000000000000000 l    d  .debug_line	0000000000000000              .debug_line
+0000000000000000 l    d  .debug_str	0000000000000000              .debug_str
+0000000000000000 l    d  .debug_loc	0000000000000000              .debug_loc
+0000000000000000 l    d  .debug_ranges	0000000000000000              .debug_ranges
+0000000000000000 l    df *ABS*	0000000000000000              init.c
+0000000000000000 l    df *ABS*	0000000000000000              static-reloc.c
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+0000000000410df0 l     O .ctors	0000000000000000              __CTOR_LIST__
+0000000000410e00 l     O .dtors	0000000000000000              __DTOR_LIST__
+00000000004024fb l     F .text	0000000000000000              deregister_tm_clones
+000000000040251a l     F .text	0000000000000000              register_tm_clones
+0000000000402551 l     F .text	0000000000000000              __do_global_dtors_aux
+0000000000411660 l     O .bss	0000000000000001              completed.7309
+0000000000411668 l     O .bss	0000000000000008              dtor_idx.7311
+00000000004025a8 l     F .text	0000000000000000              frame_dummy
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+0000000000410df8 l     O .ctors	0000000000000000              __CTOR_END__
+000000000040f85c l     O .eh_frame	0000000000000000              __FRAME_END__
+000000000040b0d1 l     F .text	0000000000000000              __do_global_ctors_aux
+0000000000000000 l    df *ABS*	0000000000000000              ci_client_server.c
+0000000000000000 l    df *ABS*	0000000000000000              ci_main.c
+0000000000411680 l     O .bss	0000000000000004              mode
+00000000004116a0 l     O .bss	0000000000000118              l_server
+0000000000411270 l     O .data	0000000000000008              lp_server
+00000000004117c0 l     O .bss	0000000000000118              l_client
+0000000000411278 l     O .data	0000000000000008              lp_client
+00000000004118d8 l     O .bss	0000000000000008              pcap_capture_handle
+000000000040c468 l     O .rodata	0000000000000007              dev.5736
+0000000000402a6e l     F .text	0000000000000113              start_client
+0000000000402b81 l     F .text	000000000000010e              start_server
+0000000000000000 l    df *ABS*	0000000000000000              ci_nl.c
+00000000004118e0 l     O .bss	0000000000000008              captured_frames
+0000000000411900 l     O .bss	0000000000000028              captured_frames_lock
+0000000000411928 l     O .bss	0000000000000008              nlsock
+0000000000411930 l     O .bss	0000000000000004              received
+0000000000402e3f l     F .text	000000000000007e              capture_frame
+0000000000402ebd l     F .text	0000000000000035              transmit_frame
+0000000000402ef2 l     F .text	00000000000001b8              process_hwsim_cmd
+00000000004030aa l     F .text	0000000000000111              nlcb_function
+0000000000411938 l     O .bss	0000000000000008              nlmsgheader.6731
+0000000000411940 l     O .bss	0000000000000008              gnlmsgheader.6732
+0000000000411960 l     O .bss	00000000000000a8              nlattrs.6730
+0000000000000000 l    df *ABS*	0000000000000000              ci_queues.c
+0000000000411a20 l     O .bss	0000000000000100              pcap_errbuf
+0000000000411b20 l     O .bss	0000000000000014              queues_running
+0000000000411b34 l     O .bss	0000000000000004              last_queue
+00000000004033dd l     F .text	0000000000000025              add_running_queue
+0000000000403402 l     F .text	000000000000008c              del_running_queue
+0000000000411b38 l     O .bss	0000000000000004              packets_received
+0000000000411b3c l     O .bss	0000000000000004              packets_sent
+0000000000411b40 l     O .bss	0000000000000004              packets_captured
+0000000000411b44 l     O .bss	0000000000000004              packets_injected
+0000000000411b48 l     O .bss	0000000000000004              packets_nlinjected
+0000000000411b60 l     O .bss	0000000000000500              ciqs
+0000000000411280 l     O .data	0000000000000040              looper_functions
+0000000000403bb2 l     F .text	0000000000000212              repeat_sending_function
+0000000000403e78 l     F .text	0000000000000274              repeat_receiving_function
+000000000040417a l     F .text	00000000000000ba              repeat_capturing_function
+00000000004043d7 l     F .text	0000000000000019              repeat_nlcapturing_function
+00000000004042ac l     F .text	00000000000000fe              repeat_injecting_function
+00000000004043fb l     F .text	000000000000000b              repeat_nlinjecting_function
+00000000004112c0 l     O .data	0000000000000040              init_functions
+0000000000403b66 l     F .text	000000000000004c              init_sending_function
+0000000000403e1d l     F .text	000000000000005b              init_receiving_function
+00000000004040ec l     F .text	000000000000008e              init_capturing_function
+00000000004043aa l     F .text	000000000000002d              init_nlcapturing_function
+0000000000404234 l     F .text	0000000000000078              init_injecting_function
+00000000004043f0 l     F .text	000000000000000b              init_nlinjecting_function
+0000000000403af7 l     F .text	0000000000000023              common_final_function
+0000000000403b1a l     F .text	000000000000004c              set_length
+000000000040ca10 l     O .rodata	0000000000000018              __PRETTY_FUNCTION__.5732
+0000000000403dc4 l     F .text	0000000000000059              get_length
+000000000040ca30 l     O .rodata	000000000000001a              __PRETTY_FUNCTION__.5747
+0000000000000000 l    df *ABS*	0000000000000000              ci_tests.c
+0000000000411300 l     O .data	0000000000000061              beacon1
+0000000000411364 l     O .data	0000000000000004              beacon1_len
+0000000000411380 l     O .data	0000000000000061              beacon2
+00000000004113e4 l     O .data	0000000000000004              beacon2_len
+0000000000411400 l     O .data	0000000000000061              beacon3
+0000000000411464 l     O .data	0000000000000004              beacon3_len
+0000000000412060 l     O .bss	0000000000000118              l_server
+0000000000411468 l     O .data	0000000000000008              lp_server
+0000000000412180 l     O .bss	0000000000000118              l_client
+0000000000411470 l     O .data	0000000000000008              lp_client
+0000000000412298 l     O .bss	0000000000000008              pcap_capture_handle
+00000000004122a0 l     O .bss	0000000000000008              pcap_injection_handle
+00000000004122a8 l     O .bss	0000000000000004              test_data
+00000000004122ac l     O .bss	0000000000000004              test_final
+000000000040d460 l     O .rodata	000000000000000c              __PRETTY_FUNCTION__.5098
+00000000004046db l     F .text	00000000000002a2              test_item
+000000000040d470 l     O .rodata	000000000000000a              __PRETTY_FUNCTION__.5107
+000000000040497d l     F .text	00000000000003fe              test_queue
+000000000040d480 l     O .rodata	000000000000000b              __PRETTY_FUNCTION__.5122
+0000000000404d7b l     F .text	00000000000003cc              test_send_receive_queues
+000000000040d490 l     O .rodata	0000000000000019              __PRETTY_FUNCTION__.5131
+000000000040d4b0 l     O .rodata	000000000000000d              __PRETTY_FUNCTION__.5138
+000000000040d4c0 l     O .rodata	000000000000000f              __PRETTY_FUNCTION__.5155
+000000000040d4d0 l     O .rodata	0000000000000012              __PRETTY_FUNCTION__.5170
+000000000040d4f0 l     O .rodata	0000000000000014              __PRETTY_FUNCTION__.5179
+000000000040d508 l     O .rodata	000000000000000c              __PRETTY_FUNCTION__.5197
+000000000040d518 l     O .rodata	000000000000000d              __PRETTY_FUNCTION__.5208
+000000000040d528 l     O .rodata	000000000000000d              __PRETTY_FUNCTION__.5219
+000000000040d538 l     O .rodata	000000000000000f              __PRETTY_FUNCTION__.5229
+0000000000000000 l    df *ABS*	0000000000000000              ci_workers.c
+00000000004122c0 l     O .bss	0000000000000014              workers_running
+00000000004122d4 l     O .bss	0000000000000004              next_worker
+0000000000406216 l     F .text	000000000000003f              add_running_worker
+0000000000406255 l     F .text	000000000000003c              find_running_worker
+0000000000406291 l     F .text	000000000000006b              del_running_worker
+00000000004122e0 l     O .bss	0000000000000208              workers
+00000000004124f0 l     O .bss	0000000000000010              listening_data
+0000000000412500 l     O .bss	0000000000000028              moving_data
+000000000040638b l     F .text	0000000000000102              start_mover_worker
+00000000004067bd l     F .text	0000000000000050              repeat_moving_function
+000000000040674f l     F .text	000000000000006e              repeat_listening_function
+0000000000000000 l    df *ABS*	0000000000000000              history.c
+0000000000411480 l     O .data	0000000000000094              beacon1
+0000000000411514 l     O .data	0000000000000004              beacon1_len
+0000000000411520 l     O .data	0000000000000094              beacon2
+00000000004115b4 l     O .data	0000000000000004              beacon2_len
+00000000004115c0 l     O .data	0000000000000094              beacon3
+0000000000411654 l     O .data	0000000000000004              beacon3_len
+000000000040d6f0 l     O .rodata	000000000000000d              __PRETTY_FUNCTION__.4506
+0000000000000000 l    df *ABS*	0000000000000000              item.c
+0000000000000000 l    df *ABS*	0000000000000000              lisa.c
+0000000000412528 l     O .bss	0000000000000004              lisa_initialized
+0000000000406c7b l     F .text	0000000000000054              isnumber
+0000000000000000 l    df *ABS*	0000000000000000              looper.c
+0000000000000000 l    df *ABS*	0000000000000000              queue.c
+000000000041252c l     O .bss	0000000000000004              q_initialized
+0000000000000000 l    df *ABS*	0000000000000000              radiotap.c
+0000000000000000 l    df *ABS*	0000000000000000              utilities.c
+0000000000412540 l     O .bss	0000000000000068              printer
+00000000004125c0 l     O .bss	0000000000002580              print_data
+0000000000414b40 l     O .bss	0000000000000004              head
+0000000000414b44 l     O .bss	0000000000000004              tail
+000000000040a4de l     F .text	000000000000002d              init_printer
+000000000040a50b l     F .text	00000000000000c4              repeat_printer_function
+000000000040a5cf l     F .text	0000000000000019              final_printer
+0000000000411658 l     O .data	0000000000000008              hex
+0000000000414b48 l     O .bss	0000000000000001              fs_malloc_initialized
+0000000000414b50 l     O .bss	0000000000000008              fs_malloc_memory
+0000000000414b58 l     O .bss	0000000000000008              fs_malloc_flags
+0000000000414b60 l     O .bss	0000000000000004              fs_malloc_current
+0000000000000000 l    df *ABS*	0000000000000000              elf-init.c
+0000000000000000 l    df *ABS*	0000000000000000              
+0000000000410df0 l       .ctors	0000000000000000              __init_array_end
+0000000000410e10 l     O .dynamic	0000000000000000              _DYNAMIC
+0000000000410df0 l       .ctors	0000000000000000              __init_array_start
+000000000040dea8 l       .eh_frame_hdr	0000000000000000              __GNU_EH_FRAME_HDR
+0000000000411000 l     O .got.plt	0000000000000000              _GLOBAL_OFFSET_TABLE_
+000000000040b0d0 g     F .text	0000000000000001              __libc_csu_fini
+0000000000000000       F *UND*	0000000000000000              genl_connect@@libnl_3
+0000000000000000       F *UND*	0000000000000000              pcap_setnonblock
+0000000000404406 g     F .text	0000000000000027              test_init_function
+000000000040a1b1 g     F .text	0000000000000095              rt_add_channel_header
+0000000000000000       F *UND*	0000000000000000              free@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              recv@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              putchar@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              pthread_create@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              nla_len@@libnl_3
+000000000040894d g     F .text	00000000000005c3              lisa_recv
+0000000000403807 g     F .text	000000000000003b              ciqs_stop
+0000000000409e66 g     F .text	0000000000000057              q_size
+0000000000000000       F *UND*	0000000000000000              __errno_location@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              nla_get_u32@@libnl_3
+0000000000411260  w      .data	0000000000000000              data_start
+000000000040a61a g     F .text	0000000000000011              stop_printing_worker
+00000000004033c7 g     F .text	0000000000000016              cinl_run
+0000000000402944 g     F .text	0000000000000061              write_test_file
+0000000000000000       F *UND*	0000000000000000              strcpy@@GLIBC_2.2.5
+00000000004099d9 g     F .text	0000000000000016              looper_nowait
+0000000000000000       F *UND*	0000000000000000              nla_data@@libnl_3
+0000000000405b2d g     F .text	000000000000004a              test_radiotap
+0000000000414b70 g     O .bss	0000000000000010              test_q
+0000000000402884 g     F .text	00000000000000c0              sig_handler
+0000000000000000       F *UND*	0000000000000000              puts@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              genl_ctrl_search_by_name@@libnl_3
+0000000000403873 g     F .text	0000000000000031              ciqs_resume
+0000000000000000       F *UND*	0000000000000000              vsnprintf@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              setsockopt@@GLIBC_2.2.5
+0000000000402801 g     F .text	0000000000000083              print_error
+00000000004098a7 g     F .text	00000000000000bf              looper_function
+0000000000414b80 g     O .bss	0000000000000320              history
+0000000000409a66 g     F .text	0000000000000048              looper_wait_for_actual_state
+000000000040525f g     F .text	00000000000004c1              test_injection
+0000000000000000       F *UND*	0000000000000000              fcntl@@GLIBC_2.2.5
+00000000004034d0 g     F .text	0000000000000126              ciqs_print_stats
+00000000004076db g     F .text	0000000000000145              lisa_connect_by_name
+0000000000000000       F *UND*	0000000000000000              inet_ntoa@@GLIBC_2.2.5
+0000000000403a94 g     F .text	0000000000000063              ciqs_size_ts
+000000000040ae86 g     F .text	0000000000000110              fs_malloc
+0000000000411660 g       .data	0000000000000000              _edata
+00000000004025ad g     F .text	00000000000000fc              ci_start_client
+0000000000406004 g     F .text	0000000000000212              test_fs_malloc
+0000000000000000       F *UND*	0000000000000000              fclose@@GLIBC_2.2.5
+0000000000406dad g     F .text	000000000000021b              lisa_setup_tcp
+0000000000403935 g     F .text	000000000000002c              ciqs_size
+000000000040b0f4 g     F .fini	0000000000000000              .hidden _fini
+0000000000409b37 g     F .text	0000000000000082              looper_start
+000000000040a62b g     F .text	0000000000000117              q2print
+0000000000000000       F *UND*	0000000000000000              nl_cb_set@@libnl_3
+0000000000409f32 g     F .text	000000000000005f              rt_print_hdr
+0000000000000000       F *UND*	0000000000000000              htons@@GLIBC_2.2.5
+000000000040a454 g     F .text	0000000000000054              rt_print_payload_hash
+0000000000406c33 g     F .text	0000000000000048              lisa_set_error
+00000000004038a4 g     F .text	0000000000000039              ciqs_put_item
+0000000000000000       F *UND*	0000000000000000              send@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              printf@@GLIBC_2.2.5
+0000000000409c4c g     F .text	000000000000003c              looper_resume
+0000000000000000       F *UND*	0000000000000000              snprintf@@GLIBC_2.2.5
+0000000000406fc8 g     F .text	00000000000001ca              lisa_setup_udp
+0000000000406d97 g     F .text	0000000000000016              lisa_set_to_vsock
+0000000000000000       F *UND*	0000000000000000              gettimeofday@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              __assert_fail@@GLIBC_2.2.5
+0000000000414ea0 g     O .bss	0000000000000028              history_lock
+0000000000000000       F *UND*	0000000000000000              htonl@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              memset@@GLIBC_2.2.5
+0000000000409c88 g     F .text	000000000000003f              looper_update_data
+0000000000405eab g     F .text	0000000000000159              test_client2
+00000000004027b7 g     F .text	0000000000000025              ci_resume_server
+0000000000000000       F *UND*	0000000000000000              sendto@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              nl_send_auto@@libnl_3
+0000000000000000       F *UND*	0000000000000000              close@@GLIBC_2.2.5
+0000000000405147 g     F .text	0000000000000118              test_capture
+00000000004099ef g     F .text	000000000000003c              looper_set_desired_state
+000000000040a2dd g     F .text	0000000000000042              rt_set_defaults
+0000000000410e08 g     O .dtors	0000000000000000              .hidden __DTOR_END__
+0000000000000000       F *UND*	0000000000000000              pcap_next_ex
+0000000000000000       F *UND*	0000000000000000              __libc_start_main@@GLIBC_2.2.5
+0000000000402e33 g     F .text	000000000000000c              cinl_received
+00000000004038dd g     F .text	000000000000002c              ciqs_get_item
+0000000000409e1b g     F .text	000000000000004b              q_move_item
+0000000000406b02 g     F .text	0000000000000058              item_free
+0000000000406bfe g     F .text	0000000000000035              item_copy
+0000000000000000       F *UND*	0000000000000000              genl_family_get_id@@libnl_3
+000000000040a4a8 g     F .text	0000000000000036              rt_get_payload_hash
+0000000000000000       F *UND*	0000000000000000              pcap_geterr
+0000000000411260 g       .data	0000000000000000              __data_start
+00000000004068b9 g     F .text	00000000000000c1              history_was_injected
+000000000040442d g     F .text	0000000000000022              test_looper_function
+000000000040348e g     F .text	0000000000000042              ciqs_stop_all
+0000000000000000       F *UND*	0000000000000000              inet_addr@@GLIBC_2.2.5
+00000000004035f6 g     F .text	000000000000012e              ciqs_init_queues
+000000000040697a g     F .text	00000000000000f2              history_test
+0000000000000000       F *UND*	0000000000000000              signal@@GLIBC_2.2.5
+000000000040a31f g     F .text	00000000000000de              rt_to_default
+000000000040a246 g     F .text	0000000000000097              rt_set_channel_header
+0000000000000000       F *UND*	0000000000000000              gethostbyname@@GLIBC_2.2.5
+000000000040273e g     F .text	000000000000001b              ci_resume_client
+0000000000407fb1 g     F .text	00000000000004b6              lisa_send
+0000000000409f91 g     F .text	0000000000000032              byte_of_u64
+0000000000406cfd g     F .text	000000000000009a              lisa_open
+00000000004066bd g     F .text	0000000000000049              ciws_pause
+0000000000409d74 g     F .text	0000000000000030              q_peek_item
+00000000004097b1 g     F .text	00000000000000da              lisa_read_response
+0000000000000000  w      *UND*	0000000000000000              __gmon_start__
+0000000000403724 g     F .text	00000000000000e3              ciqs_start
+0000000000409fc3 g     F .text	00000000000001ee              rt_make_header_from_data
+0000000000409c10 g     F .text	000000000000003c              looper_pause
+0000000000411268 g     O .data	0000000000000000              .hidden __dso_handle
+0000000000403a2f g     F .text	0000000000000065              ciqs_peek_item_ts
+0000000000000000       F *UND*	0000000000000000              memcpy@@GLIBC_2.14
+0000000000407192 g     F .text	0000000000000549              lisa_connect
+000000000040c000 g     O .rodata	0000000000000004              _IO_stdin_used
+0000000000409cc7 g     F .text	0000000000000030              q_init
+0000000000406cec g     F .text	0000000000000011              lisa_stop
+0000000000408704 g     F .text	0000000000000249              lisa_send_to
+0000000000000000       F *UND*	0000000000000000              inet_pton@@GLIBC_2.2.5
+0000000000405bfb g     F .text	0000000000000157              test_server
+000000000040962e g     F .text	00000000000000a5              lisa_set_nonblocking
+0000000000405720 g     F .text	000000000000020e              test_capture2send
+000000000040a8e4 g     F .text	00000000000004c4              q2print_wftype
+0000000000000000       F *UND*	0000000000000000              select@@GLIBC_2.2.5
+0000000000409ebd g     F .text	0000000000000075              q_clear
+0000000000406ccf g     F .text	000000000000001d              lisa_start
+00000000004029a5 g     F .text	00000000000000c9              capture_one_packet
+0000000000403842 g     F .text	0000000000000031              ciqs_pause
+0000000000000000       F *UND*	0000000000000000              pthread_mutex_unlock@@GLIBC_2.2.5
+000000000040b070 g     F .text	000000000000005d              __libc_csu_init
+000000000040680d g     F .text	0000000000000055              history_init
+0000000000000000       F *UND*	0000000000000000              malloc@@GLIBC_2.2.5
+00000000004039ca g     F .text	0000000000000065              ciqs_get_item_ts
+0000000000409aae g     F .text	000000000000004d              looper_update_state
+0000000000000000       F *UND*	0000000000000000              nlmsg_alloc@@libnl_3
+00000000004093d0 g     F .text	00000000000000ee              lisa_close
+0000000000409cf7 g     F .text	000000000000007d              q_put_item
+0000000000000000       F *UND*	0000000000000000              pcap_inject
+0000000000000000       F *UND*	0000000000000000              listen@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              recvfrom@@GLIBC_2.2.5
+0000000000414ed0 g       .bss	0000000000000000              _end
+0000000000409da4 g     F .text	0000000000000077              q_get_item
+0000000000406a6c g     F .text	0000000000000096              item_make
+00000000004024d0 g     F .text	000000000000002b              _start
+000000000040648d g     F .text	00000000000001dd              ciws_start
+0000000000000000       F *UND*	0000000000000000              nlmsg_data@@libnl_3
+000000000040988b g     F .text	000000000000001c              lisa_set_wait_time
+00000000004027dc g     F .text	0000000000000025              ci_stop_server
+0000000000408467 g     F .text	0000000000000138              lisa_cast
+0000000000407a1b g     F .text	0000000000000596              lisa_accept
+0000000000406706 g     F .text	0000000000000049              ciws_resume
+0000000000411660 g       .bss	0000000000000000              __bss_start
+0000000000402c8f g     F .text	00000000000001a4              main
+000000000040a742 g     F .text	00000000000001a2              q2print_hex
+0000000000403961 g     F .text	0000000000000069              ciqs_put_item_ts
+0000000000402723 g     F .text	000000000000001b              ci_pause_client
+0000000000409719 g     F .text	0000000000000098              lisa_get_local_host
+000000000040633e g     F .text	000000000000004d              ciws_init
+0000000000000000       F *UND*	0000000000000000              nl_cb_alloc@@libnl_3
+0000000000000000       F *UND*	0000000000000000              bind@@GLIBC_2.2.5
+0000000000414b64 g     O .bss	0000000000000002              __packed
+0000000000407820 g     F .text	00000000000001fb              lisa_listen
+0000000000402759 g     F .text	0000000000000039              ci_stop_client
+00000000004026a9 g     F .text	000000000000007a              ci_start_server
+0000000000403909 g     F .text	000000000000002c              ciqs_peek_item
+0000000000000000       F *UND*	0000000000000000              atol@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              nl_socket_set_nonblocking@@libnl_3
+00000000004031bb g     F .text	000000000000020c              cinl_init
+000000000040859f g     F .text	0000000000000165              lisa_send_from
+0000000000000000       F *UND*	0000000000000000              fopen@@GLIBC_2.2.5
+0000000000409a2b g     F .text	000000000000003b              looper_get_actual_state
+0000000000406862 g     F .text	0000000000000057              history_hash
+0000000000000000       F *UND*	0000000000000000              pthread_join@@GLIBC_2.2.5
+0000000000408f10 g     F .text	00000000000004c0              lisa_recv_from
+000000000040592e g     F .text	00000000000001ff              test_receive2inject
+0000000000000000       F *UND*	0000000000000000              nlmsg_hdr@@libnl_3
+000000000040ae5a g     F .text	000000000000002c              fs_malloc_close
+000000000040a3fd g     F .text	0000000000000057              rt_get_payload
+0000000000000000       F *UND*	0000000000000000              accept@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              getsockname@@GLIBC_2.2.5
+000000000040af96 g     F .text	00000000000000d6              fs_free
+0000000000000000       F *UND*	0000000000000000              nlmsg_free@@libnl_3
+000000000040446e g     F .text	000000000000026d              test_looper
+0000000000405d52 g     F .text	0000000000000159              test_client1
+0000000000000000       F *UND*	0000000000000000              genlmsg_put@@libnl_3
+00000000004096d3 g     F .text	0000000000000046              lisa_get_local_port
+0000000000000000       F *UND*	0000000000000000              pcap_open_live
+0000000000000000       F *UND*	0000000000000000              nla_get_u64@@libnl_3
+0000000000000000       F *UND*	0000000000000000              sprintf@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              exit@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              connect@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              nl_recvmsgs_default@@libnl_3
+0000000000000000       F *UND*	0000000000000000              fwrite@@GLIBC_2.2.5
+0000000000411660 g     O .data	0000000000000000              .hidden __TMC_END__
+0000000000409966 g     F .text	0000000000000073              looper_init
+0000000000000000       F *UND*	0000000000000000              genlmsg_parse@@libnl_3
+000000000040a5e8 g     F .text	0000000000000032              start_printing_worker
+0000000000402792 g     F .text	0000000000000025              ci_pause_server
+00000000004094be g     F .text	0000000000000170              lisa_close_client
+000000000040444f g     F .text	000000000000001f              test_final_function
+0000000000000000       F *UND*	0000000000000000              strerror@@GLIBC_2.2.5
+0000000000409afb g     F .text	000000000000003c              looper_change_usleep_time
+0000000000409bb9 g     F .text	0000000000000057              looper_stop
+0000000000000000       F *UND*	0000000000000000              nl_socket_alloc_cb@@libnl_3
+0000000000000000       F *UND*	0000000000000000              sleep@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              pthread_mutex_init@@GLIBC_2.2.5
+0000000000405b77 g     F .text	0000000000000084              test_all
+0000000000402000 g     F .init	0000000000000000              .hidden _init
+0000000000414ec8 g     O .bss	0000000000000002              last_history
+0000000000406b5a g     F .text	00000000000000a4              item_match
+0000000000000000       F *UND*	0000000000000000              pthread_mutex_lock@@GLIBC_2.2.5
+00000000004062fc g     F .text	0000000000000042              ciws_stop_all
+000000000040666a g     F .text	0000000000000053              ciws_stop
+000000000040ada8 g     F .text	00000000000000b2              fs_malloc_open
+0000000000000000       F *UND*	0000000000000000              usleep@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              socket@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              genl_ctrl_alloc_cache@@libnl_3
+
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+modprobe nlmon
+iplink add nlmon0 type nlmon
+iplink set nlmon0 up

@@ -1,0 +1,4 @@
+#!/bin/sh
+#insmod /root/mac80211_hwsim.ko radios=2
+insmod /lib/modules/4.14.180/kernel/drivers/net/wireless/mac80211_hwsim.ko radios=1 starting_mac_addr=2
+ifconfig hwsim0 up

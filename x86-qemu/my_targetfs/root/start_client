@@ -1,0 +1,2 @@
+#!/bin/sh
+./client wlan1 wlan0 1000

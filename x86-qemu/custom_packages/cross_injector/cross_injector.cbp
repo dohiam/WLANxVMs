@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="cross_injector" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_vm" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/cross_injector" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_vm" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/cross_injector" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_vm" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="./src" />
+			<Add directory="../../../build/targetfs/include" />
+			<Add directory="../../../build/targetfs/include/libnl3" />
+			<Add directory="../../../build/targetfs/include/pcap" />
+		</Compiler>
+		<Linker>
+			<Add library="../../../build/targetfs/lib/libpcap.so" />
+			<Add library="../../../build/targetfs/lib/libpthread.so.0" />
+			<Add library="../../../build/targetfs/lib/libnl-genl-3.so" />
+			<Add library="../../../build/targetfs/lib/libnl-3.so" />
+		</Linker>
+		<Unit filename="src/aq_type.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/aq_type.h" />
+		<Unit filename="src/bignum_sec_profiling.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bignum_sec_profiling.h" />
+		<Unit filename="src/bit_things.h" />
+		<Unit filename="src/ci_client_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ci_client_server.h" />
+		<Unit filename="src/ci_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ci_main.h" />
+		<Unit filename="src/ci_nl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ci_nl.h" />
+		<Unit filename="src/ci_queues.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ci_queues.h" />
+		<Unit filename="src/ci_workers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ci_workers.h" />
+		<Unit filename="src/debug.h" />
+		<Unit filename="src/lisa.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lisa.h" />
+		<Unit filename="src/looper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/looper.h" />
+		<Unit filename="src/mac80211_hwsim.h" />
+		<Unit filename="src/radiotap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/radiotap.h" />
+		<Unit filename="src/utilities.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/utilities.h" />
+		<Extensions>
+			<debugger>
+				<remote_debugging>
+					<options conn_type="0" ip_address="localhost" ip_port="7771" />
+				</remote_debugging>
+			</debugger>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

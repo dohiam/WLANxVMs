@@ -1,0 +1,25 @@
+clfs_system
+targetfs
+CUSTOM include_headers_from_xtools
+CUSTOM copy_glibc_to_targetfs
+busybox
+iana-etc
+bootscripts
+linux 
+wireless_tools
+libpcap
+tcpdump
+gdb
+strace
+edu
+nc-vsock
+libnl
+hostapd
+wpa_supplicant
+libconfig
+CUSTOMIN build wmedium clean
+CUSTOMIN build wmedium
+CUSTOMIN build wmedium install
+targetfs copy_my_targetfs
+linux rebuild_initramfs
+linux copy_bzimage_to_project_root

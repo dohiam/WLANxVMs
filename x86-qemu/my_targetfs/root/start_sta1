@@ -1,0 +1,6 @@
+#!/bin/sh
+set -x
+ifconfig wlan0 down
+iwconfig wlan0 essid testap mode managed channel 6
+ifconfig wlan0 172.16.16.2
+ifconfig wlan0 up

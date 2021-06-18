@@ -1,0 +1,25 @@
+#!/bin/bash
+## @file linux/install_targetfs.sh
+## @brief builds the intiramfs and rebuilds boot image
+## @details if there is any error then leave the error_file to indicate it
+#
+#fine-print: Copyright (c) 2020-2021, David Hamilton <david@davidohamilton.com>. This software may be freely copied and used under GPLv2 (see LICENSE.txt in root directory).
+
+#set +x
+
+# Standard cc build setup
+. $CLFSPROJ/config.sh
+. $CLFSPROJ/architecture.sh
+. $CLFS/scripts/common.sh
+
+LOG="${CLFS_STATUS_DIR}/${PACKAGE_NAME}/logfile.txt"
+touch $LOG
+chmod ugo+rw $LOG
+echo "rebuilding initramfs"
+#force update to ensure any change in targetfs is reflected in initramfs
+touch ../../targetfs
+#make -j $JOBS ARCH="${CLFS_ARCH}" SYSROOT="$CLFS_SYSROOT_DIR" CROSS_COMPILE="${CLFS_TARGET}-"  > $LOG 2>&1
+make -j $JOBS ARCH="${CLFS_ARCH}" SYSROOT="$CLFS_SYSROOT_DIR" CROSS_COMPILE="${CLFS_TARGET}-"
+if [ $? -ne 0 ]; then echo "exiting $PACKAGE $STEP due to make failure at at initial make"; exit $?; fi
+
+rm -f $CLFS_ERROR_FILE

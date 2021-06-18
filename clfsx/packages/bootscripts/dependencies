@@ -1,0 +1,4 @@
+download, clfs_system, project_folders
+install_targetfs, clfs_system, project_folders
+install_targetfs, bootscripts, download
+install_targetfs, targetfs, make_rootfs_directories

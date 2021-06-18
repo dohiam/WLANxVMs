@@ -1,0 +1,4 @@
+#!/bin/sh
+iwconfig wlan1 essid testap channel 6
+ifconfig wlan1 172.16.16.2
+ifconfig wlan1 up

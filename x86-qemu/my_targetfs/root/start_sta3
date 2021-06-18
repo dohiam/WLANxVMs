@@ -1,0 +1,6 @@
+#!/bin/sh
+insmod mac80211_hwsim.ko radios=2
+ifconfig hwsim0 up
+iwconfig wlan1 essid testap channel 6
+ifconfig wlan1 172.16.16.4
+ifconfig wlan1 up

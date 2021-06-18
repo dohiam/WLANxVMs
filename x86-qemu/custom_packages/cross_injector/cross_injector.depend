@@ -1,0 +1,937 @@
+# depslib dependency file v1.0
+1591910848 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/pkt.c
+	"pkt.h"
+	"history.h"
+	<stdio.h>
+	<stdint.h>
+
+1592852657 /home/david/xc/x86-qemu/custom_packages/cross_injector/history.h
+	<stdint.h>
+	"pcap.h"
+
+1592850752 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/history.c
+	"history.h"
+	"util.h"
+	<pthread.h>
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+
+1592677158 /home/david/xc/x86-qemu/custom_packages/cross_injector/pkt.h
+	<stdint.h>
+	<pcap.h>
+	<pthread.h>
+	<lisa.h>
+
+1592860329 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<signal.h>
+	<unistd.h>
+	<pthread.h>
+	<pcap.h>
+	"main.h"
+	"queues.h"
+
+1592860329 /home/david/xc/x86-qemu/custom_packages/cross_injector/main.h
+
+1591910737 /home/david/xc/x86-qemu/custom_packages/cross_injector/lisa.h
+	<windows.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<fcntl.h>
+	<time.h>
+	<sys/time.h>
+
+1592493172 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/lisa.c
+	<lisa.h>
+	<strings.h>
+	<memory.h>
+	<unistd.h>
+	<stdlib.h>
+	<stdio.h>
+	<fcntl.h>
+	<errno.h>
+	<string.h>
+
+1592454879 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/util.c
+	"util.h"
+	<stdio.h>
+	<pthread.h>
+
+1592677158 /home/david/xc/x86-qemu/custom_packages/cross_injector/util.h
+	<pcap.h>
+
+1592860569 /home/david/xc/x86-qemu/custom_packages/cross_injector/queues.h
+	<stdint.h>
+
+1592860249 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/queues.c
+	"queues.h"
+	"lisa.h"
+	"history.h"
+	"main.h"
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	<pthread.h>
+	<assert.h>
+
+1620798985 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/lisa.c
+	"lisa.h"
+	<strings.h>
+	<memory.h>
+	<unistd.h>
+	<stdlib.h>
+	<stdio.h>
+	<fcntl.h>
+	<pthread.h>
+	<errno.h>
+	<string.h>
+
+1592940619 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<signal.h>
+	<unistd.h>
+	<pthread.h>
+	<pcap.h>
+	"main.h"
+	"queues.h"
+
+1593758857 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/main.h
+
+1593993299 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/queues.h
+	<stdint.h>
+	"items.h"
+	"lisa.h"
+	<pcap.h>
+
+1593459381 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/queues.c
+	"queues.h"
+	"lisa.h"
+	"history.h"
+	"main.h"
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	<pthread.h>
+	<assert.h>
+
+1620800387 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/lisa.h
+	<windows.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<pthread.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<fcntl.h>
+	<time.h>
+	<sys/time.h>
+	<linux/vm_sockets.h>
+
+1620768059 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/history.h
+	<stdint.h>
+	"pcap.h"
+
+1620768062 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/history.c
+	"history.h"
+	<pthread.h>
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+
+1593928674 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/items.h
+	"lisa.h"
+	<stdint.h>
+
+1623822976 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_queues.c
+	"ci_queues.h"
+	"aq_type.h"
+	"ci_main.h"
+	"item.h"
+	"looper.h"
+	"utilities.h"
+	"ci_nl.h"
+	"radiotap.h"
+	"debug.h"
+	"bignum_sec_profiling.h"
+	<unistd.h>
+	<string.h>
+	<pthread.h>
+	<assert.h>
+	<sys/ioctl.h>
+	<stdlib.h>
+	<inttypes.h>
+
+1623306110 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_queues.h
+	<stdint.h>
+	"item.h"
+	"lisa.h"
+	<pcap.h>
+
+1620797451 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/item.h
+	<stdint.h>
+
+1620764633 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_main.h
+
+1620799811 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/queue.h
+	"item.h"
+
+1620799459 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/looper.h
+	<pthread.h>
+	<unistd.h>
+
+1620922179 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_tests.c
+	"looper.h"
+	"item.h"
+	"queue.h"
+	"ci_queues.h"
+	"ci_workers.h"
+	"ci_client_server.h"
+	"utilities.h"
+	"radiotap.h"
+	"ci_main.h"
+	"lisa.h"
+	<assert.h>
+	<stdio.h>
+	<pcap.h>
+
+1623395015 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_workers.h
+	"lisa.h"
+
+1620922371 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_client_server.h
+	"lisa.h"
+
+1623342081 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/radiotap.h
+	"item.h"
+	<stdint.h>
+
+1620921940 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/looper.c
+	"looper.h"
+	<unistd.h>
+	<stdio.h>
+
+1620799808 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/queue.c
+	"queue.h"
+	<unistd.h>
+	<stdio.h>
+
+1620797451 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/item.c
+	"item.h"
+	"history.h"
+	<stdlib.h>
+	<string.h>
+	"utilities.h"
+
+1623340700 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_client_server.c
+	"ci_client_server.h"
+	"ci_queues.h"
+	"ci_workers.h"
+	"lisa.h"
+	<stdio.h>
+	<sys/ioctl.h>
+	"utilities.h"
+
+1623395032 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_workers.c
+	"ci_workers.h"
+	"ci_main.h"
+	"ci_queues.h"
+	"looper.h"
+	"item.h"
+	"utilities.h"
+	"debug.h"
+
+1623342081 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/radiotap.c
+	"radiotap.h"
+	"history.h"
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+
+1623476586 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<signal.h>
+	<unistd.h>
+	<pthread.h>
+	<pcap.h>
+	"ci_main.h"
+	"ci_queues.h"
+	"ci_client_server.h"
+	"ci_workers.h"
+	"ci_nl.h"
+	"utilities.h"
+	"item.h"
+
+1620765977 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_tests.h
+	"queue.h"
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/pcap.h
+	<pcap/pcap.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/pcap/pcap.h
+	<pcap/funcattrs.h>
+	<pcap/pcap-inttypes.h>
+	<winsock2.h>
+	<io.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/time.h>
+	<pcap/socket.h>
+	<pcap/bpf.h>
+	<stdio.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/pcap/funcattrs.h
+	<pcap/compiler-tests.h>
+	<sal.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/pcap/compiler-tests.h
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/pcap/pcap-inttypes.h
+	<inttypes.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/pcap/socket.h
+	<windef.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netdb.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/pcap/bpf.h
+	<pcap/funcattrs.h>
+	<pcap/dlt.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/pcap/dlt.h
+
+1623342157 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_nl.c
+	"ci_nl.h"
+	"mac80211_hwsim.h"
+	<netlink/netlink.h>
+	<netlink/msg.h>
+	<netlink/genl/genl.h>
+	<netlink/genl/ctrl.h>
+	<netlink/genl/family.h>
+	<stdio.h>
+	<pthread.h>
+	"item.h"
+	"queue.h"
+	"radiotap.h"
+	"utilities.h"
+	"aq_type.h"
+
+1623341871 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/ci_nl.h
+	"queue.h"
+
+1589099343 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/mac80211_hwsim.h
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/netlink.h
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	<stdlib.h>
+	<sys/poll.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/time.h>
+	<netdb.h>
+	<netlink/netlink-compat.h>
+	<linux/netlink.h>
+	<linux/rtnetlink.h>
+	<linux/genetlink.h>
+	<linux/netfilter/nfnetlink.h>
+	<netinet/tcp.h>
+	<netlink/version.h>
+	<netlink/errno.h>
+	<netlink/types.h>
+	<netlink/handlers.h>
+	<netlink/socket.h>
+	<netlink/object.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/netlink-compat.h
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/version.h
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/errno.h
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/types.h
+	<stdio.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/handlers.h
+	<stdio.h>
+	<stdint.h>
+	<sys/types.h>
+	<netlink/netlink-compat.h>
+	<netlink/netlink-kernel.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/netlink-kernel.h
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/socket.h
+	<netlink/types.h>
+	<netlink/handlers.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/object.h
+	<netlink/netlink.h>
+	<netlink/utils.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/utils.h
+	<netlink/netlink.h>
+	<netlink/list.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/list.h
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/msg.h
+	<netlink/netlink.h>
+	<netlink/object.h>
+	<netlink/attr.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/attr.h
+	<netlink/netlink.h>
+	<netlink/object.h>
+	<netlink/addr.h>
+	<netlink/data.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/addr.h
+	<netlink/netlink.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/data.h
+	<netlink/netlink.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/genl/genl.h
+	<netlink/netlink.h>
+	<netlink/msg.h>
+	<netlink/attr.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/genl/ctrl.h
+	<netlink/netlink.h>
+	<netlink/cache.h>
+	<netlink/addr.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/cache.h
+	<netlink/netlink.h>
+	<netlink/msg.h>
+	<netlink/utils.h>
+	<netlink/object.h>
+
+1616278366 /home/david/xc/x86-qemu/targetfs/include/libnl3/netlink/genl/family.h
+	<netlink/netlink.h>
+	<netlink/cache.h>
+
+1623731713 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/utilities.c
+	"utilities.h"
+	"looper.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	<assert.h>
+	"debug.h"
+	"bit_things.h"
+
+1623723550 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/utilities.h
+	<stdarg.h>
+	<stdint.h>
+	<stdbool.h>
+	"debug.h"
+
+1623622002 /home/david/xc/build/targetfs/include/pcap.h
+	<pcap/pcap.h>
+
+1623622002 /home/david/xc/build/targetfs/include/pcap/pcap.h
+	<pcap/funcattrs.h>
+	<pcap/pcap-inttypes.h>
+	<winsock2.h>
+	<io.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/time.h>
+	<pcap/socket.h>
+	<pcap/bpf.h>
+	<stdio.h>
+
+1623622002 /home/david/xc/build/targetfs/include/pcap/funcattrs.h
+	<pcap/compiler-tests.h>
+	<sal.h>
+
+1623622002 /home/david/xc/build/targetfs/include/pcap/compiler-tests.h
+
+1623622002 /home/david/xc/build/targetfs/include/pcap/pcap-inttypes.h
+	<inttypes.h>
+
+1623622002 /home/david/xc/build/targetfs/include/pcap/socket.h
+	<windef.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netdb.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+
+1623622002 /home/david/xc/build/targetfs/include/pcap/bpf.h
+	<pcap/funcattrs.h>
+	<pcap/dlt.h>
+
+1623622002 /home/david/xc/build/targetfs/include/pcap/dlt.h
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/netlink.h
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	<stdlib.h>
+	<sys/poll.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/time.h>
+	<netdb.h>
+	<netlink/netlink-compat.h>
+	<linux/netlink.h>
+	<linux/rtnetlink.h>
+	<linux/genetlink.h>
+	<linux/netfilter/nfnetlink.h>
+	<netinet/tcp.h>
+	<netlink/version.h>
+	<netlink/errno.h>
+	<netlink/types.h>
+	<netlink/handlers.h>
+	<netlink/socket.h>
+	<netlink/object.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/netlink-compat.h
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/version.h
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/errno.h
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/types.h
+	<stdio.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/handlers.h
+	<stdio.h>
+	<stdint.h>
+	<sys/types.h>
+	<netlink/netlink-compat.h>
+	<netlink/netlink-kernel.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/netlink-kernel.h
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/socket.h
+	<netlink/types.h>
+	<netlink/handlers.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/object.h
+	<netlink/netlink.h>
+	<netlink/utils.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/utils.h
+	<netlink/netlink.h>
+	<netlink/list.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/list.h
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/msg.h
+	<netlink/netlink.h>
+	<netlink/object.h>
+	<netlink/attr.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/attr.h
+	<netlink/netlink.h>
+	<netlink/object.h>
+	<netlink/addr.h>
+	<netlink/data.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/addr.h
+	<netlink/netlink.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/data.h
+	<netlink/netlink.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/genl/genl.h
+	<netlink/netlink.h>
+	<netlink/msg.h>
+	<netlink/attr.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/genl/ctrl.h
+	<netlink/netlink.h>
+	<netlink/cache.h>
+	<netlink/addr.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/cache.h
+	<netlink/netlink.h>
+	<netlink/msg.h>
+	<netlink/utils.h>
+	<netlink/object.h>
+
+1623622611 /home/david/xc/build/targetfs/include/libnl3/netlink/genl/family.h
+	<netlink/netlink.h>
+	<netlink/cache.h>
+
+1623731625 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/debug.h
+
+1620445924 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/bit_things.h
+	<stdlib.h>
+
+1623301838 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/aq_type.c
+	"aq_type.h"
+	<stdlib.h>
+
+1623302400 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/aq_type.h
+	<stdint.h>
+	<stdbool.h>
+	<pthread.h>
+
+1623822452 source:/home/david/xc/x86-qemu/custom_packages/cross_injector/src/bignum_sec_profiling.c
+	"bignum_sec_profiling.h"
+	<pthread.h>
+	<stdio.h>
+	<assert.h>
+	<inttypes.h>
+
+1623817118 /home/david/xc/x86-qemu/custom_packages/cross_injector/src/bignum_sec_profiling.h
+	<stdint.h>
+	<stdbool.h>
+
+1623301838 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/aq_type.c
+	"aq_type.h"
+	<stdlib.h>
+
+1623302400 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/aq_type.h
+	<stdint.h>
+	<stdbool.h>
+	<pthread.h>
+
+1623823294 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/bignum_sec_profiling.c
+	"bignum_sec_profiling.h"
+	<pthread.h>
+	<stdio.h>
+	<assert.h>
+	<inttypes.h>
+
+1623817118 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/bignum_sec_profiling.h
+	<stdint.h>
+	<stdbool.h>
+
+1623340700 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_client_server.c
+	"ci_client_server.h"
+	"ci_queues.h"
+	"ci_workers.h"
+	"lisa.h"
+	<stdio.h>
+	<sys/ioctl.h>
+	"utilities.h"
+
+1620922370 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_client_server.h
+	"lisa.h"
+
+1620800386 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/lisa.h
+	<windows.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<pthread.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<fcntl.h>
+	<time.h>
+	<sys/time.h>
+	<linux/vm_sockets.h>
+
+1623306110 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_queues.h
+	<stdint.h>
+	"item.h"
+	"lisa.h"
+	<pcap.h>
+
+1620797450 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/item.h
+	<stdint.h>
+
+1623884713 /home/xct/Desktop/xc/build/targetfs/include/pcap.h
+	<pcap/pcap.h>
+
+1623884713 /home/xct/Desktop/xc/build/targetfs/include/pcap/pcap.h
+	<pcap/funcattrs.h>
+	<pcap/pcap-inttypes.h>
+	<winsock2.h>
+	<io.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/time.h>
+	<pcap/socket.h>
+	<pcap/bpf.h>
+	<stdio.h>
+
+1623884713 /home/xct/Desktop/xc/build/targetfs/include/pcap/funcattrs.h
+	<pcap/compiler-tests.h>
+	<sal.h>
+
+1623884713 /home/xct/Desktop/xc/build/targetfs/include/pcap/compiler-tests.h
+
+1623884713 /home/xct/Desktop/xc/build/targetfs/include/pcap/pcap-inttypes.h
+	<inttypes.h>
+	<inttypes.h>
+
+1623884713 /home/xct/Desktop/xc/build/targetfs/include/pcap/socket.h
+	<windef.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netdb.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+
+1623884713 /home/xct/Desktop/xc/build/targetfs/include/pcap/bpf.h
+	<pcap/funcattrs.h>
+	<pcap/dlt.h>
+
+1623884713 /home/xct/Desktop/xc/build/targetfs/include/pcap/dlt.h
+
+1623395014 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_workers.h
+	"lisa.h"
+
+1623723550 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/utilities.h
+	<stdarg.h>
+	<stdint.h>
+	<stdbool.h>
+	"debug.h"
+
+1623731624 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/debug.h
+
+1623476586 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<signal.h>
+	<unistd.h>
+	<pthread.h>
+	<pcap.h>
+	"ci_main.h"
+	"ci_queues.h"
+	"ci_client_server.h"
+	"ci_workers.h"
+	"ci_nl.h"
+	"utilities.h"
+	"item.h"
+
+1620764632 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_main.h
+
+1623341870 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_nl.h
+	"queue.h"
+
+1620799810 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/queue.h
+	"item.h"
+
+1623342156 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_nl.c
+	"ci_nl.h"
+	"mac80211_hwsim.h"
+	<netlink/netlink.h>
+	<netlink/msg.h>
+	<netlink/genl/genl.h>
+	<netlink/genl/ctrl.h>
+	<netlink/genl/family.h>
+	<stdio.h>
+	<pthread.h>
+	"item.h"
+	"queue.h"
+	"radiotap.h"
+	"utilities.h"
+	"aq_type.h"
+
+1589099342 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/mac80211_hwsim.h
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/netlink.h
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	<stdlib.h>
+	<sys/poll.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/time.h>
+	<netdb.h>
+	<netlink/netlink-compat.h>
+	<linux/netlink.h>
+	<linux/rtnetlink.h>
+	<linux/genetlink.h>
+	<linux/netfilter/nfnetlink.h>
+	<netinet/tcp.h>
+	<netlink/version.h>
+	<netlink/errno.h>
+	<netlink/types.h>
+	<netlink/handlers.h>
+	<netlink/socket.h>
+	<netlink/object.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/netlink-compat.h
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/version.h
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/errno.h
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/types.h
+	<stdio.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/handlers.h
+	<stdio.h>
+	<stdint.h>
+	<sys/types.h>
+	<netlink/netlink-compat.h>
+	<netlink/netlink-kernel.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/netlink-kernel.h
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/socket.h
+	<netlink/types.h>
+	<netlink/handlers.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/object.h
+	<netlink/netlink.h>
+	<netlink/utils.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/utils.h
+	<netlink/netlink.h>
+	<netlink/list.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/list.h
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/msg.h
+	<netlink/netlink.h>
+	<netlink/object.h>
+	<netlink/attr.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/attr.h
+	<netlink/netlink.h>
+	<netlink/object.h>
+	<netlink/addr.h>
+	<netlink/data.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/addr.h
+	<netlink/netlink.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/data.h
+	<netlink/netlink.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/genl/genl.h
+	<netlink/netlink.h>
+	<netlink/msg.h>
+	<netlink/attr.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/genl/ctrl.h
+	<netlink/netlink.h>
+	<netlink/cache.h>
+	<netlink/addr.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/cache.h
+	<netlink/netlink.h>
+	<netlink/msg.h>
+	<netlink/utils.h>
+	<netlink/object.h>
+
+1623885325 /home/xct/Desktop/xc/build/targetfs/include/libnl3/netlink/genl/family.h
+	<netlink/netlink.h>
+	<netlink/cache.h>
+
+1623342080 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/radiotap.h
+	"item.h"
+	<stdint.h>
+
+1623822976 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_queues.c
+	"ci_queues.h"
+	"aq_type.h"
+	"ci_main.h"
+	"item.h"
+	"looper.h"
+	"utilities.h"
+	"ci_nl.h"
+	"radiotap.h"
+	"debug.h"
+	"bignum_sec_profiling.h"
+	<unistd.h>
+	<string.h>
+	<pthread.h>
+	<assert.h>
+	<sys/ioctl.h>
+	<stdlib.h>
+	<inttypes.h>
+
+1620799458 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/looper.h
+	<pthread.h>
+	<unistd.h>
+
+1623395032 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/ci_workers.c
+	"ci_workers.h"
+	"ci_main.h"
+	"ci_queues.h"
+	"looper.h"
+	"item.h"
+	"utilities.h"
+	"debug.h"
+
+1620798984 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/lisa.c
+	"lisa.h"
+	<strings.h>
+	<memory.h>
+	<unistd.h>
+	<stdlib.h>
+	<stdio.h>
+	<fcntl.h>
+	<pthread.h>
+	<errno.h>
+	<string.h>
+
+1620921940 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/looper.c
+	"looper.h"
+	<unistd.h>
+	<stdio.h>
+
+1623342080 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/radiotap.c
+	"radiotap.h"
+	"history.h"
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+
+1620768058 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/history.h
+	<stdint.h>
+	"pcap.h"
+
+1623731712 source:/home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/utilities.c
+	"utilities.h"
+	"looper.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	<assert.h>
+	"debug.h"
+	"bit_things.h"
+
+1620445924 /home/xct/Desktop/xc/x86-qemu/custom_packages/cross_injector/src/bit_things.h
+	<stdlib.h>
+

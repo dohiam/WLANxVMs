@@ -1,0 +1,2 @@
+#!/bin/sh
+./wmediumd -c wmediumd.cfg

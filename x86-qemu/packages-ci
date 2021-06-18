@@ -1,0 +1,5 @@
+CUSTOMIN build ci
+targetfs copy_my_targetfs
+linux install_modules
+linux rebuild_initramfs
+linux copy_bzimage_to_project_root

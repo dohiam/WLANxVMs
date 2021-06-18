@@ -1,0 +1,6 @@
+clean, no_dependencies, is_bootstrap_step
+download, clfs_system, project_folders
+build_headers, linux, download
+install_targetfs, gcc, build_final
+install_targetfs, targetfs, make_rootfs_directories
+patch_gen_initramfs_list, linux, download
